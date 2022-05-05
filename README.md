@@ -12,107 +12,40 @@ JavaScript 函数库、工具类
 
 ## Docs
 
-[To view the document](https://x-extends.github.io/xe-utils/) [查看文档](https://x-extends.gitee.io/xe-utils/)
+[To view the document 查看文档](https://yeshenzhy.github.io/learn-web/vite/whyVite.html)
 
 ## Installing
 
 ```shell
-npm install xe-utils
+npm install yeshen-tools -D
+yarn add yeshen-tools -D
 ```
 
 Using nodejs
 
 ```javascript
-const XEUtils = require('xe-utils')
+const yeshenTools = require('yeshen-tools')
 ```
 
-Get on [unpkg](https://unpkg.com/xe-utils/) and [cdnjs](https://cdn.jsdelivr.net/npm/xe-utils/)
+Get on [unpkg](https://unpkg.com/yeshen-tools/) and [cdnjs](https://cdn.jsdelivr.net/npm/yeshen-tools/)
 
 ```HTML
-<script src="https://cdn.jsdelivr.net/npm/xe-utils"></script>
+<script src="https://cdn.jsdelivr.net/npm/yeshen-tools"></script>
 ```
 
 ### Import all methods
 
 ```javascript
-import _XEUtils_ from 'xe-utils'
+import * as yeshenTools from 'yeshen-tools'
 
-XEUtils.toDateString(Date.now())
-// 2018-01-01 10:30:28
-XEUtils.toStringDate('2018-01-01 10:30:00')
-// Mon Jan 01 2018 10:30:00 GMT+0800 (中国标准时间)
 ```
+## Import one methods
 
-## Import on demand
-
-这样按需引入方法，可以使体积达到最小  
-单个导入，包的大小 gzip >≈ 60B+，按需导入
 
 ```javascript
-import each from 'xe-utils/each'
-import toDateString from 'xe-utils/toDateString'
+import { xxx } from 'yeshen-tools'
 
-each({ a: 11, b: 22, c: 33 }, function (item, key){
-  console.log(item)
-})
-// 11
-// 22
-// 33
-toDateString(Date.now(), 'yyyy-MM-dd HH:mm:ss')
-// 2018-01-01 10:30:28
 ```
-
-```javascript
-import XEUtils from 'xe-utils/ctor'
-import each from 'xe-utils/each'
-import toDateString from 'xe-utils/toDateString'
-import toFixedNumber from 'xe-utils/toFixedNumber'
-
-XEUtils.mixin({
-  each,
-  toDateString,
-  toFixedNumber
-})
-XEUtils.toDateString(Date.now(), 'yyyy-MM-dd HH:mm:ss')
-// 2018-01-01 10:30:28
-```
-
-按功能导入所有方法
-
-```javascript
-import XEUtils from 'xe-utils/ctor'
-import objectMethods from 'xe-utils/object'
-import arrayMethods from 'xe-utils/array'
-import baseMethods from 'xe-utils/base'
-import numberMethods from 'xe-utils/number'
-import dateMethods from 'xe-utils/date'
-import stringMethods from 'xe-utils/string'
-import functionMethods from 'xe-utils/function'
-import urlMethods from 'xe-utils/url'
-import webMethods from 'xe-utils/web'
-
-XEUtils.mixin(
-  // Object
-  objectMethods,
-  // Array
-  arrayMethods,
-  // Base
-  baseMethods,
-  // Number
-  numberMethods,
-  // Date
-  dateMethods,
-  // String
-  stringMethods,
-  // Function
-  functionMethods,
-  // URL
-  urlMethods,
-  // Web
-  webMethods
-)
-```
-
 ## License
 
-[MIT](LICENSE) © 2017-present, Xu Liangzhan
+[MIT](LICENSE) © 2022-present, 夜神丶
